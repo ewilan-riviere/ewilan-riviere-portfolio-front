@@ -56,7 +56,7 @@ $ribbon-color: #fff;
     -ms-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     &:hover {
       background: $ribbon-color-bg-hover;
     }

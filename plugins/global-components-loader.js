@@ -1,6 +1,10 @@
 import Vue from 'vue'
 
-const components = require.context('@/components', true, /[a-z]\w+\.(vue)$/)
+const components = require.context(
+  '@/components/common',
+  true,
+  /[a-z]\w+\.(vue)$/
+)
 
 components.keys().forEach((fileName) => {
   const componentConfig = components(fileName)

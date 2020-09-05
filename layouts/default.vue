@@ -1,8 +1,8 @@
 <template>
-  <div id="portfolio">
-    <div class="parrallax">
-      <github-ribbon></github-ribbon>
-      <nuxt class="padding" />
+  <div>
+    <github-ribbon></github-ribbon>
+    <div>
+      <nuxt />
     </div>
   </div>
 </template>
@@ -41,8 +41,11 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+  @apply text-black;
+}
 #portfolio,
-.parrallax {
+.parallax {
   min-height: 100vh;
 }
 .view {
@@ -68,7 +71,7 @@ export default {
     }
   }
 }
-.parrallax {
+.parallax {
   /* The image used */
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
     url('/images/background.jpg');
