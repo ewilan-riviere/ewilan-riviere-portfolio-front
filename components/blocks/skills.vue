@@ -14,144 +14,30 @@
         </p>
       </div>
       <div class="flex flex-wrap -m-2">
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
+        <div
+          v-for="skill in skills"
+          :key="skill.id"
+          class="w-full p-2 lg:w-1/3 md:w-1/2"
+        >
           <div
+            v-if="skill"
             class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
           >
             <img
               alt="team"
               class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/80x80"
+              :src="skill.image"
             />
             <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">
-                Holden Caulfield
+              <h2
+                v-if="skill.title"
+                class="font-medium text-gray-900 title-font"
+              >
+                {{ skill.title }}
               </h2>
-              <p class="text-gray-500">UI Designer</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/84x84"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">Henry Letham</h2>
-              <p class="text-gray-500">CTO</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/88x88"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">Oskar Blinde</h2>
-              <p class="text-gray-500">Founder</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/90x90"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">John Doe</h2>
-              <p class="text-gray-500">DevOps</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/94x94"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">Martin Eden</h2>
-              <p class="text-gray-500">Software Engineer</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/98x98"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">Boris Kitua</h2>
-              <p class="text-gray-500">UX Researcher</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/100x90"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">
-                Atticus Finch
-              </h2>
-              <p class="text-gray-500">QA Engineer</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/104x94"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">Alper Kamu</h2>
-              <p class="text-gray-500">System</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full p-2 lg:w-1/3 md:w-1/2">
-          <div
-            class="flex items-center h-full p-4 border border-gray-200 rounded-lg"
-          >
-            <img
-              alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
-              src="https://dummyimage.com/108x98"
-            />
-            <div class="flex-grow">
-              <h2 class="font-medium text-gray-900 title-font">
-                Rodrigo Monchi
-              </h2>
-              <p class="text-gray-500">Product Manager</p>
+              <p v-if="skill.details" class="text-gray-500">
+                {{ skill.details }}
+              </p>
             </div>
           </div>
         </div>
@@ -163,6 +49,12 @@
 <script>
 export default {
   name: 'Skills',
+  props: {
+    skills: {
+      type: Array,
+      default: () => [],
+    },
+  },
 }
 </script>
 

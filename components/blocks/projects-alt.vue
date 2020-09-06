@@ -8,7 +8,7 @@
           >
             Pitchfork Kickstarter Taxidermy
           </h1>
-          <div class="w-20 h-1 bg-indigo-500 rounded"></div>
+          <div class="w-20 h-1 bg-indigo-500 rounded" />
         </div>
         <p class="w-full text-base leading-relaxed lg:w-1/2">
           Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical

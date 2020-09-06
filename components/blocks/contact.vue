@@ -4,9 +4,10 @@
       <div
         class="relative flex items-end justify-start p-10 overflow-hidden bg-gray-300 rounded-lg lg:w-2/3 md:w-1/2 sm:mr-10"
       >
+        <!-- eslint-disable prettier/prettier -->
         <iframe
           class="absolute inset-0"
-          style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+          style="filter: grayscale(1) contrast(1.2) opacity(0.4)"
           title="map"
           marginheight="0"
           marginwidth="0"
@@ -15,7 +16,7 @@
           width="100%"
           height="100%"
           frameborder="0"
-        ></iframe>
+        />
         <div class="relative flex flex-wrap py-6 bg-white">
           <div class="px-6 lg:w-1/2">
             <h2
@@ -66,7 +67,7 @@
         <textarea
           class="h-32 px-4 py-2 mb-4 text-base bg-white border border-gray-400 rounded resize-none focus:outline-none focus:border-indigo-500"
           placeholder="Message"
-        ></textarea>
+        />
         <button
           class="px-6 py-2 text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600"
         >

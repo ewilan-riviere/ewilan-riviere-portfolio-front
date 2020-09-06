@@ -11,8 +11,8 @@
         :height="height"
         :class="variant"
         class="fill-current"
-      ></component>
-      <span v-if="badge" class="badge" v-text="badge"></span>
+      />
+      <span v-if="badge" class="badge" v-text="badge" />
     </client-only>
   </span>
 </template>

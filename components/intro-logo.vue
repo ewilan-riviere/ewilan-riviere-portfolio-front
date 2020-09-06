@@ -5,7 +5,7 @@
         :class="anim ? 'animation' : ''"
         :to="logoRoute"
         class="logo-ewilan-anim m-auto"
-      ></div>
+      />
     </div>
     <!-- <div class="font-morpheus text-center text-5xl text-black">
       Portfolio

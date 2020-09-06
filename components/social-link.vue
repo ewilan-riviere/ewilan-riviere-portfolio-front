@@ -3,7 +3,7 @@
     <ul class="social-list">
       <li v-for="item in socials" :key="item.id" class="social-list-item">
         <a :href="item.link ? item.link : $apiAddress() + item.file">
-          <icon-base :name="item.icon" variant="text-white"></icon-base>
+          <icon-base :name="item.icon" variant="text-white" />
         </a>
       </li>
     </ul>

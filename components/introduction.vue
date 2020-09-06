@@ -6,24 +6,19 @@
           :anim="true"
           class="ewilan-intro-logo"
           logo-route="/portfolio"
-        ></intro-logo>
+        />
         <h1
           class="intro-title font-morpheus background-ewilan text-3xl"
           v-html="name"
         />
         <div class="intro-details font-lautre mb-5">
           <div>
-            <div>
-              <span v-html="title"></span> (<span v-html="level"></span>)
-            </div>
-            <div class="white-link" v-html="professional"></div>
+            <div><span v-html="title" /> (<span v-html="level" />)</div>
+            <div class="white-link" v-html="professional" />
             <div class="mt-4" v-html="spec" />
           </div>
         </div>
-        <social-link
-          v-if="socials !== undefined"
-          :socials="socials"
-        ></social-link>
+        <social-link v-if="socials !== undefined" :socials="socials" />
       </div>
     </div>
   </div>
