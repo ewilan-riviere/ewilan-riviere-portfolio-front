@@ -4,7 +4,7 @@
     <!-- <introduction :texts="texts" :socials="socials"></introduction> -->
     <hero />
     <features />
-    {{ formations }}
+    {{ apiData }}
     <formations :formations="formations" />
     <projects-list :projects="projects" />
     <projects-alt />
@@ -91,8 +91,24 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      api: 'https://portfolio.ewilan-riviere.com/api/portfolio/formations',
+      apiData: [],
+    }
+  },
   mounted() {
     console.log('bouyah?')
+    this.getData()
+  },
+  methods: {
+    async getData() {
+      try {
+        this.apiData = await this.$axios.get(this.api)
+      } catch (error) {
+        console.log(error)
+      }
+    },
   },
   head() {
     return {
