@@ -66,6 +66,7 @@ export default {
         // app.$axios.$get('texts'),
         // app.$axios.$get('socials')
       ])
+      console.log('bouh?')
       console.log(formations)
 
       return {
