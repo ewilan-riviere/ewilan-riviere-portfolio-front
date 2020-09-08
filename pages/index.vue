@@ -49,7 +49,7 @@ export default {
         }
       })
       .catch((e) => {
-        error({ statusCode: 404, message: 'Billet non trouvé' })
+        error(e)
       })
   },
   // async asyncData({ app, query, error }) {
