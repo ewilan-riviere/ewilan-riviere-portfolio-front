@@ -90,6 +90,9 @@ export default {
       }
     }
   },
+  mounted() {
+    console.log('bouyah?')
+  },
   head() {
     return {
       title: "Portfolio d'Ewilan Rivière",
