@@ -17,10 +17,14 @@ function getTextContent(slug, data) {
   return null
 }
 
-function getApiAddress() {
-  const apiAddress = process.env.BASE_URL.replace('api/', '')
-  return apiAddress
-}
+Vue.prototype.$textContent = getTextContent
+
+// function getApiAddress() {
+//   const apiAddress = process.env.BASE_URL.replace('api/', '')
+//   return apiAddress
+// }
+
+// Vue.prototype.$apiAddress = getApiAddress
 
 function slugify(text) {
   // eslint-disable-next-line unicorn/escape-case
@@ -31,8 +35,4 @@ function slugify(text) {
     .replace(/[^\w-]+/g, '')
 }
 
-// this is to help Webstorm with autocomplete
-
-Vue.prototype.$textContent = getTextContent
-Vue.prototype.$apiAddress = getApiAddress
 Vue.prototype.$slugify = slugify
