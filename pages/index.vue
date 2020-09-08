@@ -4,6 +4,7 @@
     <!-- <introduction :texts="texts" :socials="socials"></introduction> -->
     <hero />
     <features />
+    {{ formations }}
     <formations :formations="formations" />
     <projects-list :projects="projects" />
     <projects-alt />

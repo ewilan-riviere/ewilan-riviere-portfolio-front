@@ -5,7 +5,19 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  purge: ['./components/**/*.vue', './layouts/**/*.vue', './pages/**/*.vue'],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: {
+    mode: 'layers',
+    layers: ['base', 'components', 'utilities'],
+    content: [
+      './components/**/*.vue',
+      './layouts/**/*.vue',
+      './pages/**/*.vue',
+    ],
+  },
   theme: {},
   variants: {},
   plugins: [],
