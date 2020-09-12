@@ -34,6 +34,8 @@ export default {
     { src: '@/plugins/global-components-loader' },
     { src: '@/plugins/vue-icons-loader', mode: 'client' },
     { src: '@/plugins/vue-helper' },
+    { src: '@/plugins/hamburgers-vue', mode: 'client' },
+    { src: '@/plugins/swiper' },
   ],
   /*
    ** Nuxt.js dev-modules

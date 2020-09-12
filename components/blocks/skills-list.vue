@@ -5,12 +5,10 @@
         <h1
           class="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font"
         >
-          Our Team
+          Mes compétences
         </h1>
         <p class="mx-auto text-base leading-relaxed lg:w-2/3">
-          Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-          gentrify, subway tile poke farm-to-table. Franzen you probably haven't
-          heard of them.
+          Liste non-exhaustive de mes compétences disposées aléatoirement.
         </p>
       </div>
       <div class="flex flex-wrap -m-2">
@@ -25,8 +23,9 @@
           >
             <img
               alt="team"
-              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 bg-gray-100 rounded-full"
+              class="flex-shrink-0 object-cover object-center w-16 h-16 mr-4 rounded-full"
               :src="skill.image"
+              :style="`background: rgba(${hexToRgb(skill.color)}, 0.1)`"
             />
             <div class="flex-grow">
               <h2
@@ -35,9 +34,12 @@
               >
                 {{ skill.title }}
               </h2>
-              <p v-if="skill.details" class="text-gray-500">
-                {{ skill.details }}
-              </p>
+              <p
+                v-if="skill.details"
+                class="text-gray-500 word-wraping"
+                lang="fr"
+                v-html="skill.details"
+              ></p>
             </div>
           </div>
         </div>
@@ -53,6 +55,17 @@ export default {
     skills: {
       type: Array,
       default: () => [],
+    },
+  },
+  methods: {
+    hexToRgb(hex) {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+      return result
+        ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(
+            result[3],
+            16
+          )}`
+        : null
     },
   },
 }

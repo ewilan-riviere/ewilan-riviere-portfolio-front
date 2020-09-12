@@ -9,8 +9,8 @@
         <h1
           class="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl"
         >
-          Before they sold out <br class="hidden lg:inline-block" />readymade
-          gluten
+          Portfolio<br />
+          d'Ewilan Rivière
         </h1>
         <p class="mb-8 leading-relaxed">
           Copper mug try-hard pitchfork pour-over freegan heirloom neutra air
@@ -32,19 +32,20 @@
         </div>
       </div>
       <div class="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
-        <img
-          class="object-cover object-center rounded"
-          alt="hero"
-          src="https://dummyimage.com/720x600"
-        />
+        <swiper class="rounded"></swiper>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import swiper from '@/components/blocks/swiper'
+
 export default {
   name: 'Hero',
+  components: {
+    swiper,
+  },
 }
 </script>
 

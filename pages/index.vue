@@ -2,12 +2,12 @@
   <div>
     <!-- <intro-logo /> -->
     <!-- <introduction :texts="texts" :socials="socials"></introduction> -->
-    <hero />
+    <!-- <portfolio-logo /> -->
+    <hero class="pt-20" />
     <features />
     <formations :formations="formations" />
     <projects-list :projects="projects" />
-    <projects-alt />
-    <skills :skills="skills" />
+    <skills-list :skills="skills" />
     <!-- <contact></contact> -->
     <v-footer />
   </div>
@@ -20,9 +20,8 @@ import hero from '@/components/blocks/hero'
 import contact from '@/components/blocks/contact'
 import features from '@/components/blocks/features'
 import formations from '@/components/blocks/formations'
-import projectsList from '@/components/blocks/projects'
-import projectsAlt from '@/components/blocks/projects-alt'
-import skills from '@/components/blocks/skills'
+import projectsList from '@/components/blocks/projects-list'
+import skillsList from '@/components/blocks/skills-list'
 
 export default {
   components: {
@@ -33,8 +32,7 @@ export default {
     features,
     formations,
     projectsList,
-    projectsAlt,
-    skills,
+    skillsList,
   },
   async asyncData({ app, query, error }) {
     try {
@@ -65,7 +63,6 @@ export default {
         // app.$axios.$get('texts'),
         // app.$axios.$get('socials')
       ])
-      console.log(formations)
 
       return {
         formations: formations.data,
@@ -77,7 +74,7 @@ export default {
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.log(error)
+      console.error(error)
 
       return {
         formations: [],

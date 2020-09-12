@@ -1,6 +1,14 @@
 <template>
   <section class="text-gray-700 body-font">
     <div class="container flex flex-wrap px-5 py-24 mx-auto">
+      <div class="w-full mb-20 text-center">
+        <h1
+          class="mb-2 text-2xl font-medium text-gray-900 sm:text-3xl title-font"
+        >
+          Mes formations
+        </h1>
+        <div class="w-20 h-1 mx-auto bg-indigo-500 rounded" />
+      </div>
       <div
         v-for="(formation, id) in formations"
         :key="id"

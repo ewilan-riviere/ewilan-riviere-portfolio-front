@@ -7,8 +7,8 @@
       <!-- eslint-disable vue/require-component-is -->
       <component
         :is="`icon-${name}`"
-        :width="width"
-        :height="height"
+        :width="size ? size : width"
+        :height="size ? size : height"
         :class="variant"
         class="fill-current"
       />
@@ -43,6 +43,10 @@ export default {
       default: 'default',
     },
     badge: {
+      type: [String, Number],
+      default: '',
+    },
+    size: {
       type: [String, Number],
       default: '',
     },

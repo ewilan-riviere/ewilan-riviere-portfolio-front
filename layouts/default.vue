@@ -1,6 +1,6 @@
 <template>
   <div>
-    <github-ribbon />
+    <navbar />
     <div>
       <nuxt />
     </div>
